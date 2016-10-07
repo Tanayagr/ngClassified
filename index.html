@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ngClassifieds</title>
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+	<link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css" media="all" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-app="ngClassifieds" ng-controller="classifiedsCtrl">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<p><strong>ngClassified</strong></p>
+			<md-button>
+				<md-icon class="mdi mdi-plus-circle"></md-icon>
+				New classified
+			</md-button>
+		</div>
+	</md-toolbar>
+
+	<md-content class="md-padding" layout="row" layout-wrap>
+		<md-card flex="33">
+			<img src="http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/14625/s/shav_new._philips-shaver-rechargeable-hq-6990-pop-up-trimmer.JPG" alt="Trimmer">
+			<md-card-content>
+				<div class="classified-info">
+					<h2 class="md-title">{{ content.title }}</h2>
+					<h3>{{ content.price }}</h3>
+					<p>{{ content.description }}</p>
+
+				</div>
+			</md-card-content>
+		</md-card>
+	</md-content>
+
+
+
+	
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-material/angular-material.js"></script>
+	<script src="node_modules/angular-aria/angular-aria.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="components/classifiedsController.js"></script>
+</body>
+</html>
